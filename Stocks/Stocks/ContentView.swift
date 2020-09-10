@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var webservice = WebService()
-    
     var body: some View {
         Text("Hello, world!")
             .padding()
