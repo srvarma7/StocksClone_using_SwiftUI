@@ -12,8 +12,6 @@ struct ContentView: View {
     //@State var stockList = [StockViewModel(stock: Stock(symbol: "APL", description: "Apple", price: 20, change: "+3")), StockViewModel(stock: Stock(symbol: "APL", description: "Apple", price: 20, change: "+3"))]
     @ObservedObject var stockListVM: StockListViewModel
     
-    private var offSet: CGFloat = -290
-    
     init() {
         stockListVM = StockListViewModel()
         self.setupNavigation()
