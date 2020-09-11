@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		80D73F1B250AEBF900FA620C /* StockCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F1A250AEBF900FA620C /* StockCellView.swift */; };
+		80D73F1F250B103100FA620C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F1E250B103100FA620C /* SearchView.swift */; };
 		80FC9F10250722390010F15E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC9F0F250722390010F15E /* AppDelegate.swift */; };
 		80FC9F12250722390010F15E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC9F11250722390010F15E /* SceneDelegate.swift */; };
 		80FC9F14250722390010F15E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC9F13250722390010F15E /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		80D73F1A250AEBF900FA620C /* StockCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCellView.swift; sourceTree = "<group>"; };
+		80D73F1E250B103100FA620C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		80FC9F0C250722390010F15E /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FC9F0F250722390010F15E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80FC9F11250722390010F15E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				80D73F1A250AEBF900FA620C /* StockCellView.swift */,
+				80D73F1E250B103100FA620C /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				80FC9F27250722E10010F15E /* Stock.swift in Sources */,
 				80FC9F29250722E80010F15E /* News.swift in Sources */,
 				80FC9F14250722390010F15E /* ContentView.swift in Sources */,
+				80D73F1F250B103100FA620C /* SearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
