@@ -11,8 +11,9 @@ class StockListViewModel: ObservableObject {
     
     @Published var searchTerm: String = ""
     @Published var stocks: [StockViewModel] = [StockViewModel]()
+    //@Published var news: []
     
-    func loadDataFromWeb() {
+    init() {
         fetchStocks()
         //fetchNews()
     }

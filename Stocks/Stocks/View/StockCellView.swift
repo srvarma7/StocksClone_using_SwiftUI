@@ -9,41 +9,41 @@ import SwiftUI
 
 struct StockCellView: View {
     
-    var stock: Stock
-    var fontColor = Color.black
+    var stock: StockViewModel
+    var fontColor = Color.white
     
     var body: some View {
         VStack {
             HStack {
                 Text(stock.symbol)
-                    .font(.title)
+                    .font(.title2)
+                    .fontWeight(.bold)
                     .foregroundColor(fontColor)
                 Spacer()
                 Text("\(stock.price)")
-                    .font(.title)
+                    .font(.headline)
+                    .fontWeight(.bold)
                     .foregroundColor(fontColor)
             }
             HStack {
                 Text(stock.description)
-                    .font(.title2)
-                    .foregroundColor(fontColor)
+                    .font(.title3)
+                    .foregroundColor(Color.gray)
                 Spacer()
                 Text(stock.change)
                     .foregroundColor(fontColor)
-                    .font(.title2)
+                    .font(.headline)
                     .padding(3)
                     .background(Color.red)
                     .cornerRadius(7)
             }
-        }
-        .padding()
-        .background(Color.green)
-
+        }.background(Color.black)
     }
 }
 
 struct StockCellView_Previews: PreviewProvider {
     static var previews: some View {
-        StockCellView(stock: Stock(symbol: "APL", description: "Apple", price: 25, change: "+1.5"))
+        let stock = Stock(symbol: "APL", description: "Apple", price: 25, change: "+1.5")
+        StockCellView(stock: StockViewModel(stock: stock))
     }
 }

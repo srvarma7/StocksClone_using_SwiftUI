@@ -9,34 +9,68 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var searchTerm = ""
+    //@State var stockList = [StockViewModel(stock: Stock(symbol: "APL", description: "Apple", price: 20, change: "+3")), StockViewModel(stock: Stock(symbol: "APL", description: "Apple", price: 20, change: "+3"))]
+    @ObservedObject var stockListVM: StockListViewModel
+    
+    private var offSet: CGFloat = -290
     
     init() {
-        UINavigationBar.appearance().backgroundColor = UIColor.black
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().prefersLargeTitles = false
+        stockListVM = StockListViewModel()
+        self.setupNavigation()
+        self.setupTableView()
     }
     
     var body: some View {
         
-        NavigationView {
-            ZStack(alignment: .leading) {
+        VStack {
+            ZStack {
                 Color.black
+                
                 VStack(alignment: .leading) {
-                    Text("September 11")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.gray)
-                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-                        
-                    SearchView(searchTerm: self.$searchTerm)
+                    Spacer(minLength: 50)
+                    stocksHedingView()
+                    todayDateView()
+                    
+                    SearchView(searchTerm: self.$stockListVM.searchTerm)
                         .padding()
                     
-                }.offset(y: -240)
+                    StocksListView(stocks: $stockListVM.stocks, searchTerm: $stockListVM.searchTerm)
+                    Spacer()
+                }
             }.edgesIgnoringSafeArea(.all)
-            .navigationTitle("Stocks")
         }
+        
     }
+    
+    func setupNavigation() {
+        UINavigationBar.appearance().backgroundColor = .black
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().prefersLargeTitles = true
+    }
+    
+    func setupTableView() {
+        UITableView.appearance().backgroundColor = .black
+        UITableViewCell.appearance().backgroundColor = .black
+        UITableView.appearance().backgroundColor = UIColor.clear
+        UITableViewCell.appearance().backgroundColor = .clear
+    }
+    
+    fileprivate func stocksHedingView() -> some View {
+        return Text("Stocks")
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .foregroundColor(.white)
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+    }
+    
+    fileprivate func todayDateView() -> some View {
+        return Text("11 September")
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .foregroundColor(.gray)
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
