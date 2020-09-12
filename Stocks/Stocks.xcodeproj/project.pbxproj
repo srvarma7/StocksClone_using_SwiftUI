@@ -12,7 +12,9 @@
 		80D73F23250B14F000FA620C /* StocksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F22250B14F000FA620C /* StocksListView.swift */; };
 		80D73F25250B5C3000FA620C /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F24250B5C3000FA620C /* NewsViewModel.swift */; };
 		80D73F27250B5CAF00FA620C /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F26250B5CAF00FA620C /* NewsListViewModel.swift */; };
-		80D73F29250B5DD700FA620C /* NewsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F28250B5DD700FA620C /* NewsCellView.swift */; };
+		80D73F2B250B5E7200FA620C /* NewsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F2A250B5E7200FA620C /* NewsCellView.swift */; };
+		80D73F2D250B625D00FA620C /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F2C250B625D00FA620C /* NewsListView.swift */; };
+		80D73F2F250C57D000FA620C /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F2E250C57D000FA620C /* NewsView.swift */; };
 		80FC9F10250722390010F15E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC9F0F250722390010F15E /* AppDelegate.swift */; };
 		80FC9F12250722390010F15E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC9F11250722390010F15E /* SceneDelegate.swift */; };
 		80FC9F14250722390010F15E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC9F13250722390010F15E /* ContentView.swift */; };
@@ -33,7 +35,9 @@
 		80D73F22250B14F000FA620C /* StocksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksListView.swift; sourceTree = "<group>"; };
 		80D73F24250B5C3000FA620C /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		80D73F26250B5CAF00FA620C /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
-		80D73F28250B5DD700FA620C /* NewsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellView.swift; sourceTree = "<group>"; };
+		80D73F2A250B5E7200FA620C /* NewsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellView.swift; sourceTree = "<group>"; };
+		80D73F2C250B625D00FA620C /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
+		80D73F2E250C57D000FA620C /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		80FC9F0C250722390010F15E /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FC9F0F250722390010F15E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80FC9F11250722390010F15E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +113,9 @@
 				80D73F1E250B103100FA620C /* SearchView.swift */,
 				80D73F1A250AEBF900FA620C /* StockCellView.swift */,
 				80D73F22250B14F000FA620C /* StocksListView.swift */,
-				80D73F28250B5DD700FA620C /* NewsCellView.swift */,
+				80D73F2A250B5E7200FA620C /* NewsCellView.swift */,
+				80D73F2C250B625D00FA620C /* NewsListView.swift */,
+				80D73F2E250C57D000FA620C /* NewsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,9 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				80FC9F2C25072AF90010F15E /* WebService.swift in Sources */,
+				80D73F2D250B625D00FA620C /* NewsListView.swift in Sources */,
 				80D73F27250B5CAF00FA620C /* NewsListViewModel.swift in Sources */,
 				80FC9F32250871860010F15E /* StockListViewModel.swift in Sources */,
-				80D73F29250B5DD700FA620C /* NewsCellView.swift in Sources */,
+				80D73F2B250B5E7200FA620C /* NewsCellView.swift in Sources */,
+				80D73F2F250C57D000FA620C /* NewsView.swift in Sources */,
 				80FC9F10250722390010F15E /* AppDelegate.swift in Sources */,
 				80FC9F2E250869370010F15E /* Status.swift in Sources */,
 				80FC9F3025086F400010F15E /* StockViewModal.swift in Sources */,
