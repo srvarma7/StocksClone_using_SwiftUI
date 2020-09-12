@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  StocksView.swift
 //  Stocks
 //
 //  Created by Sai Raghu Varma Kallepalli on 8/9/20.
@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct StocksView: View {
     
-    //@State var stockList = [StockViewModel(stock: Stock(symbol: "APL", description: "Apple", price: 20, change: "+3")), StockViewModel(stock: Stock(symbol: "APL", description: "Apple", price: 20, change: "+3"))]
     @ObservedObject var stockListVM: StockListViewModel
+    @ObservedObject var newsVM: NewsListViewModel
+    @ObservedObject var dragValue = Drag()
     
     init() {
         stockListVM = StockListViewModel()
+        newsVM = NewsListViewModel()
         self.setupNavigation()
         self.setupTableView()
     }
@@ -33,7 +35,19 @@ struct ContentView: View {
                         .padding()
                     
                     StocksListView(stocks: $stockListVM.stocks, searchTerm: $stockListVM.searchTerm)
-                    Spacer()
+                    //Spacer()
+                    
+                    NewsView(onDragBegin: { value in
+                        self.dragValue.dragOffSet = value.translation
+                    }, onDragEnded: { value in
+                        if value.translation.height > 0 {
+                            self.dragValue.dragOffSet = CGSize(width: 0, height: 190)
+                        } else {
+                            self.dragValue.dragOffSet = CGSize(width: 0, height: -300)
+                        }
+                    }, newsList: newsVM.news)
+                    .animation(.spring())
+                    .offset(y: dragValue.dragOffSet.height)
                 }
             }.edgesIgnoringSafeArea(.all)
         }
@@ -73,6 +87,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        StocksView()
     }
 }
