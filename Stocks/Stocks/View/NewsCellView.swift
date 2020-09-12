@@ -10,6 +10,7 @@ import SwiftUI
 struct NewsCellView: View {
     
     var news: NewsViewModel
+    @ObservedObject var imageDownloader = ImageDownloader()
     
     var body: some View {
         HStack {
@@ -26,11 +27,7 @@ struct NewsCellView: View {
             
             Spacer()
             
-            Image(systemName: "car")
-                .resizable()
-                .foregroundColor(.white)
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
+            WebImageView(link: news.imageURL)
         }
         .background(Color.black)
     }
